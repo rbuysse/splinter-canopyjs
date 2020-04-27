@@ -30,6 +30,7 @@ export async function mountCurrentSapling(userSaplingsResponse) {
 
   const topLevelPathRgx = /\/([^/]+)/i;
   const pathMatches = topLevelPathRgx.exec(window.location.pathname);
+  console.log(`Matches ${pathMatches}`);
   const saplingNamespaceToLoad =
     pathMatches && pathMatches[1] ? pathMatches[1] : null;
   const currentSaplingManifest = userSaplingsResponse.find(
